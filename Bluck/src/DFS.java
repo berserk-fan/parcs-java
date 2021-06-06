@@ -21,7 +21,7 @@ public class DFS implements AM {
         NodeInfo n = (NodeInfo)info.parent.readObject();
         System.out.println("[" + n.getS() + "] Hash started.");
 
-        for(byte i = 0; i < processors - 1; i++) {
+        for(byte i = 0; i < processors; i++) {
             System.out.println("Starting thread " + i);
             final byte namespaceInProcess = i;
             pool.submit(() -> {
